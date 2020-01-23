@@ -1,23 +1,27 @@
-# Turkish translations for invenio-app-rdm.
-# Copyright (C) 2019 CERN
+# Translations template for invenio-app-rdm.
+# Copyright (C) 2020 CERN
 # This file is distributed under the same license as the invenio-app-rdm
 # project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# 
+# Translators:
+# Zacharias Zacharodimos <zacharias.zacharodimos@cern.ch>, 2020
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: invenio-app-rdm 1.0.0a5\n"
 "Report-Msgid-Bugs-To: info@inveniosoftware.org\n"
 "POT-Creation-Date: 2020-01-23 11:37+0100\n"
-"PO-Revision-Date: 2020-01-22 14:29+0100\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: tr\n"
-"Language-Team: tr <LL@li.org>\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"PO-Revision-Date: 2020-01-23 14:11+0000\n"
+"Last-Translator: Zacharias Zacharodimos <zacharias.zacharodimos@cern.ch>, 2020\n"
+"Language-Team: Turkish (https://www.transifex.com/invenio-app-rdm/teams/106775/tr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: invenio_app_rdm/config.py:94
 msgid "Turkish"
@@ -58,9 +62,9 @@ msgid "Replace this page with your themed landing page."
 msgstr ""
 
 #: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:29
-#, fuzzy, python-format
+#, python-format
 msgid "<a href=\"%(search_link)s\">Search</a> for records!"
-msgstr "Kayitlariniz icin <a href=\"%(search_ui_link)s\">arama</a> yapin!"
+msgstr ""
 
 #: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:38
 msgid "The InvenioRDM project"
@@ -68,8 +72,7 @@ msgstr ""
 
 #: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:42
 msgid ""
-"The InvenioRDM project is an open source collaboration with two main "
-"goals:"
+"The InvenioRDM project is an open source collaboration with two main goals:"
 msgstr ""
 
 #: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:47
@@ -79,8 +82,8 @@ msgstr ""
 #: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:48
 #, python-format
 msgid ""
-" Build a turn-key research data management (RDM) repository platform "
-"based on <a href=\"%(framework_link)s\">Invenio Framework</a> and <a "
+" Build a turn-key research data management (RDM) repository platform based "
+"on <a href=\"%(framework_link)s\">Invenio Framework</a> and <a "
 "href=\"%(zenodo_link)s\">Zenodo</a>."
 msgstr ""
 
@@ -90,15 +93,15 @@ msgstr ""
 
 #: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:53
 msgid ""
-"Grow a community of research institutions, private companies and "
-"individuals to sustain the platform going forward."
+"Grow a community of research institutions, private companies and individuals"
+" to sustain the platform going forward."
 msgstr ""
 
 #: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:56
 #, python-format
 msgid ""
-"More information on the <a href=\"%(inveniordm_link)s\">InvenioRDM "
-"product page</a>"
+"More information on the <a href=\"%(inveniordm_link)s\">InvenioRDM product "
+"page</a>"
 msgstr ""
 
 #: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:64
@@ -111,9 +114,9 @@ msgstr ""
 
 #: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:73
 msgid ""
-"Finally a repository that your users will love! We have thought hard "
-"about user experience for everyone: end-users, curators, system "
-"administrators, and developers. Expect more of your repository!"
+"Finally a repository that your users will love! We have thought hard about "
+"user experience for everyone: end-users, curators, system administrators, "
+"and developers. Expect more of your repository!"
 msgstr ""
 
 #: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:84
@@ -123,8 +126,8 @@ msgstr ""
 #: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:85
 msgid ""
 "InvenioRDM scales with you! Handle 1 or 100 million records, 1 byte or  "
-"several petabytes. It runs on bare-metal, VMs and container platforms "
-"such as Kubernetes and OpenShift."
+"several petabytes. It runs on bare-metal, VMs and container platforms such "
+"as Kubernetes and OpenShift."
 msgstr ""
 
 #: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:97
@@ -133,9 +136,9 @@ msgstr ""
 
 #: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:98
 msgid ""
-"InvenioRDM integrates with your institution. It supports your Single "
-"Sign-On (SSO) solution, your storage systems, your public/private clouds,"
-" your permissions models as well as your custom fields."
+"InvenioRDM integrates with your institution. It supports your Single Sign-On"
+" (SSO) solution, your storage systems, your public/private clouds, your "
+"permissions models as well as your custom fields."
 msgstr ""
 
 #: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:109
@@ -145,8 +148,8 @@ msgstr ""
 #: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:110
 msgid ""
 "InvenioRDM implements the Next Generation Repository (NGR) vision and "
-"integrates with other Open Science infrastructures such ORCID, DataCite &"
-" OpenAIRE."
+"integrates with other Open Science infrastructures such ORCID, DataCite & "
+"OpenAIRE."
 msgstr ""
 
 #: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:122
@@ -155,10 +158,9 @@ msgstr ""
 
 #: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:123
 msgid ""
-"InvenioRDM comes with pre-configured repository profiles for "
-"institutional repositories (IRs), research data management (RDM) systems "
-"as well as domain-specific repositories for health and biomedical "
-"sciences."
+"InvenioRDM comes with pre-configured repository profiles for institutional "
+"repositories (IRs), research data management (RDM) systems as well as "
+"domain-specific repositories for health and biomedical sciences."
 msgstr ""
 
 #: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:134
@@ -196,4 +198,3 @@ msgstr ""
 #: invenio_app_rdm/theme/templates/invenio_app_rdm/record_view_page.html:96
 msgid "Preview"
 msgstr ""
-
