@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: invenio-app-rdm 1.0.0a5\n"
 "Report-Msgid-Bugs-To: info@inveniosoftware.org\n"
-"POT-Creation-Date: 2020-01-22 16:09+0100\n"
+"POT-Creation-Date: 2020-01-23 11:37+0100\n"
 "PO-Revision-Date: 2020-01-22 14:29+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: tr\n"
@@ -40,10 +40,142 @@ msgstr ""
 msgid "Powered by <a href=\"%(invenio_rdm)s\">InvenioRDM</a>"
 msgstr ""
 
-#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:30
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:20
+msgid "You've successfully installed InvenioRDM !"
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:23
+msgid "Your next steps:"
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:26
 #, python-format
-msgid "<a href=\"%(search_ui_link)s\">Search</a> for records!"
+msgid "<a href=\"%(customize_link)s\">Configure and customize</a> your instance."
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:28
+msgid "Replace this page with your themed landing page."
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:29
+#, fuzzy, python-format
+msgid "<a href=\"%(search_link)s\">Search</a> for records!"
 msgstr "Kayitlariniz icin <a href=\"%(search_ui_link)s\">arama</a> yapin!"
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:38
+msgid "The InvenioRDM project"
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:42
+msgid ""
+"The InvenioRDM project is an open source collaboration with two main "
+"goals:"
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:47
+msgid "Repository Platform"
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:48
+#, python-format
+msgid ""
+" Build a turn-key research data management (RDM) repository platform "
+"based on <a href=\"%(framework_link)s\">Invenio Framework</a> and <a "
+"href=\"%(zenodo_link)s\">Zenodo</a>."
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:52
+msgid "Community"
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:53
+msgid ""
+"Grow a community of research institutions, private companies and "
+"individuals to sustain the platform going forward."
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:56
+#, python-format
+msgid ""
+"More information on the <a href=\"%(inveniordm_link)s\">InvenioRDM "
+"product page</a>"
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:64
+msgid "Features"
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:72
+msgid "Top of the class UX"
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:73
+msgid ""
+"Finally a repository that your users will love! We have thought hard "
+"about user experience for everyone: end-users, curators, system "
+"administrators, and developers. Expect more of your repository!"
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:84
+msgid "Scalability"
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:85
+msgid ""
+"InvenioRDM scales with you! Handle 1 or 100 million records, 1 byte or  "
+"several petabytes. It runs on bare-metal, VMs and container platforms "
+"such as Kubernetes and OpenShift."
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:97
+msgid "Institutional integration"
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:98
+msgid ""
+"InvenioRDM integrates with your institution. It supports your Single "
+"Sign-On (SSO) solution, your storage systems, your public/private clouds,"
+" your permissions models as well as your custom fields."
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:109
+msgid "Next Generation Repository"
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:110
+msgid ""
+"InvenioRDM implements the Next Generation Repository (NGR) vision and "
+"integrates with other Open Science infrastructures such ORCID, DataCite &"
+" OpenAIRE."
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:122
+msgid "Repository Profiles"
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:123
+msgid ""
+"InvenioRDM comes with pre-configured repository profiles for "
+"institutional repositories (IRs), research data management (RDM) systems "
+"as well as domain-specific repositories for health and biomedical "
+"sciences."
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:134
+msgid "Resilient"
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:135
+msgid ""
+"Architected from ground up to be resilient to changing business "
+"requirements. Stable APIs, easy maintenance and upgrade, as well as an "
+"extensible platform to ensure a reliable core on which you can build new "
+"innovative features and integrations."
+msgstr ""
+
+#: invenio_app_rdm/theme/templates/invenio_app_rdm/frontpage.html:145
+msgid "Brought to you by"
+msgstr ""
 
 #: invenio_app_rdm/theme/templates/invenio_app_rdm/record_view_page.html:23
 msgid "Name"
@@ -64,3 +196,4 @@ msgstr ""
 #: invenio_app_rdm/theme/templates/invenio_app_rdm/record_view_page.html:96
 msgid "Preview"
 msgstr ""
+
