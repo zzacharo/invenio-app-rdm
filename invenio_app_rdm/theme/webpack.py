@@ -10,13 +10,17 @@
 
 from __future__ import absolute_import, print_function
 
+import os
 from flask_webpackext import WebpackBundle
+from flask import current_app
+
 
 theme = WebpackBundle(
     __name__,
     'assets',
     entry={
-        'invenio-app-rdm-theme': './scss/invenio_app_rdm/theme.scss',
+        'invenio-app-rdm-theme': os.path.join('./scss/instance_theme', current_app.config.get(
+            'INSTANCE_THEME_FILE', './scss/invenio_app_rdm/theme.scss')),
         'invenio-app-rdm-js': './js/invenio_app_rdm/inveniordm.js',
     },
     dependencies={
