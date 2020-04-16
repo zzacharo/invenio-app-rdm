@@ -286,3 +286,11 @@ SEARCH_HEADER_TEMPLATE = 'invenio_app_rdm/search/header.html'
 
 SEARCH_BASE_TEMPLATE = 'invenio_app_rdm/search/search.html'
 """Search page's base template."""
+
+DRAFTS_FORMS_BASE_TEMPLATE = 'invenio_app_rdm/drafts/forms/drafts_forms.html'
+
+DRAFTS_SEARCH_BASE_TEMPLATE = 'invenio_app_rdm/drafts/search/search.html'
+DRAFTS_SEARCH_HEADER_TEMPLATE = 'invenio_app_rdm/drafts/search/header.html'
+
+
+WEBPACKEXT_STORAGE_CLS = 'pywebpack.storage.LinkStorage'
