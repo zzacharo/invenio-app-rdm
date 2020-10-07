@@ -13,11 +13,11 @@ import {
   DepositFormApp,
   PublishButton,
   SaveButton,
-  connect,
   ContributorsField,
   CreatorsField,
   TitlesField,
   ResourceTypeField,
+  FileUploader,
 } from "react-invenio-deposit";
 import { AccordionField, ErrorMessage } from "react-invenio-forms";
 
@@ -124,9 +124,9 @@ export class RDMDepositForm extends Component {
           { text: "German", value: "deu" },
           { text: "Greek", value: "ell" },
           { text: "Italian", value: "ita" },
-          { text: "Spanish", value: "spa" }
-        ]
-      }
+          { text: "Spanish", value: "spa" },
+        ],
+      },
     };
     const vocabularies = {
       ...this.config.vocabularies,
@@ -158,7 +158,7 @@ export class RDMDepositForm extends Component {
         <Grid>
           <Grid.Column width={12}>
             <AccordionField fieldPath="" active={true} label={"Files"}>
-              <p>COMING SOON</p>
+              <FileUploader />
               <br />
             </AccordionField>
 
