@@ -14,7 +14,7 @@ from invenio_pidstore.errors import PIDDeletedError
 from invenio_records_resources.services.errors import PermissionDeniedError
 
 from .deposits import deposit_create, deposit_edit, deposit_search
-from .filters import can_list_files, dereference_record, doi_identifier, \
+from .filters import dereference_record, doi_identifier, \
     has_previewable_files, make_files_preview_compatible, order_entries, \
     pid_url, select_preview_file, to_previewer_files, vocabulary_title
 from .records import record_detail, record_export, record_file_download, \
@@ -78,7 +78,6 @@ def create_blueprint(app):
         PermissionDeniedError, record_permission_denied_error)
 
     # Register template filters
-    blueprint.add_app_template_filter(can_list_files)
     blueprint.add_app_template_filter(dereference_record)
     blueprint.add_app_template_filter(doi_identifier)
     blueprint.add_app_template_filter(make_files_preview_compatible)

@@ -59,18 +59,6 @@ def to_previewer_files(record):
     ]
 
 
-def can_list_files(record):
-    """Permission check if current user can list files of record.
-
-    The current_user is used under the hood by flask-principal.
-
-    Once we move to Single-Page-App approach, we likely want to enforce
-    permissions at the final serialization level (only).
-    """
-    PermissionPolicy = get_record_permission_policy()
-    return PermissionPolicy(action="read_files", record=record).can()
-
-
 def pid_url(identifier, scheme=None, url_scheme="https"):
     """Convert persistent identifier into a link."""
     if scheme is None:

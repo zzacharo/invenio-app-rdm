@@ -56,18 +56,36 @@ class PreviewFile:
 #
 # Views
 #
-@user_permissions(actions=['update_draft'])
+@user_permissions(actions=['update_draft', 'read_files'])
 @pass_record
 @pass_record_files
 def record_detail(record=None, files=None, pid_value=None, permissions=None):
     """Record detail page (aka landing page)."""
     files_dict = None if files is None else files.to_dict()
+    has_files = files_dict is not None and \
+        len(files_dict.get('entries', [])) > 0
+    protection = 'public'
+    access = record['access']
+    if access['record'] == 'public':
+        if files_dict is None:
+            protection = 'restricted_files'
+            if access.get('embargo', {}).get('active'):
+                protection = 'embargoed_files'
+        elif has_files:
+            if access['files'] == 'public':
+                protection = 'public_files'
+            elif access['files'] == 'restricted':
+                protection = 'restricted_files'
+                if access.get('embargo', {}).get('active'):
+                    protection = 'embargoed_files'
+
     return render_template(
         "invenio_app_rdm/records/detail.html",
         record=UIJSONSerializer().serialize_object_to_dict(record.to_dict()),
         pid=pid_value,
         files=files_dict,
         permissions=permissions,
+        protection=protection
     )
 
 

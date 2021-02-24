@@ -10,7 +10,7 @@
 
 {%- extends config.BASE_TEMPLATE %}
 
-{%- from "invenio_app_rdm/records/macros/files.html" import file_list_box, preview_file_box %}
+{%- from "invenio_app_rdm/records/macros/files.html" import cannot_read_files_box, file_list_box, preview_file_box %}
 {%- from "invenio_app_rdm/records/macros/detail.html" import show_detail %}
 
 {%- set metadata = record.metadata %}
@@ -64,18 +64,17 @@
         {# files #}
         {%- block record_files -%}
         {%- if files is not none -%}
-          {%- if files.enabled and record|can_list_files %}
+          {%- if files.enabled %}
             {%- set default_preview = files.default_preview %}
             {%- set files = files|order_entries %}
             {%- if files|has_previewable_files -%}
               {%- set default_preview_file = files|select_preview_file(default_preview=default_preview) %}
-              {{ preview_file_box(default_preview_file, pid) }}
+              {{ preview_file_box(default_preview_file, pid, protection) }}
             {%- endif -%}
-            {{ file_list_box(files, pid) }}
-          {% endif %}
+            {{ file_list_box(files, pid, protection) }}
+          {%- endif -%}
         {%- else -%}
-          {# TODO: come up with a proper display #}
-          <div>Sorry, the files are restricted!</div>
+          {{ cannot_read_files_box(protection) }}
         {%- endif -%}
         {%- endblock record_files -%}
         {%- block record_details -%}

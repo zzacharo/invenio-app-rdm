@@ -20,10 +20,11 @@
 {%- endmacro %}
 
 
-{% macro preview_file_box(file, pid) %}
+{% macro preview_file_box(file, pid, protection) %}
+{% set accordion_class = "title panel-heading " %}
 <div class="panel-spacing">
   <div class="ui accordion panel" id="preview" href="#collapsablePreview">
-    <div class="active title panel-heading">
+    <div class="{{ accordion_class ~ protection }}">
       {{file.key}}
       <i class="angle down icon"></i>
     </div>
@@ -79,10 +80,11 @@
 {%- endmacro %}
 
 
-{% macro file_list_box(files, pid) %}
+{% macro file_list_box(files, pid, protection) %}
+{% set accordion_class = "title panel-heading " %}
 <div class="panel-spacing">
   <div class="ui accordion panel" id="preview" href="#collapsablePreview">
-    <div class="title panel-heading">
+    <div class="{{ accordion_class ~ protection }}">
       {{ _("Files") }}
       <small class="text-muted">{% if files %} ({{files|sum(attribute='size')|filesizeformat}}){% endif %}</small>
       <i class="angle down icon"></i>
@@ -90,6 +92,38 @@
     <div class="active content">
       <div id="collapsableFiles">
         {{ file_list(files, pid) }}
+      </div>
+    </div>
+  </div>
+</div>
+{%- endmacro %}
+
+
+{% macro cannot_read_files_box(protection) %}
+<div class="panel-spacing">
+  <div class="ui accordion panel" id="preview" href="#collapsablePreview">
+    <div class="title panel-heading">
+      {{ _("Files") }}
+      <i class="angle down icon"></i>
+    </div>
+    <div class="active content">
+      <div id="collapsableFiles">
+        <div class="ui segment">
+          <div class="ui center aligned grid">
+            <div class="middle aligned row">
+              <div class="column">
+                <div class="ui medium header">
+                  {%- if protection == 'restricted_files' %}
+                    Sorry the files are restricted!
+                  {%- endif -%}
+                  {%- if protection == 'embargoed_files' %}
+                    Sorry the files are embargoed!
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
