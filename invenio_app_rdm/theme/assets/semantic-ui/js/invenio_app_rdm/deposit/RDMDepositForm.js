@@ -16,6 +16,7 @@ import {
   DepositFormApp,
   DepositFormTitle,
   DescriptionsField,
+  DOIField,
   FileUploader,
   FormFeedback,
   IdentifiersField,
@@ -187,11 +188,14 @@ export class RDMDepositForm extends Component {
                         btnLabelGetPID={pid.btn_label_get_pid}
                         canBeManaged={pid.can_be_managed}
                         canBeUnmanaged={pid.can_be_unmanaged}
+                        defaultProvider={pid.default_provider}
+                        externalProvider={pid.external_provider}
                         fieldPath={`pids.${pid.scheme}`}
                         isEditingPublishedRecord={
                           this.props.record.is_published === true // is_published is `null` at first upload
                         }
                         managedHelpText={pid.managed_help_text}
+                        managedProviders={pid.managed_providers}
                         pidLabel={pid.pid_label}
                         pidPlaceholder={pid.pid_placeholder}
                         pidType={pid.scheme}
