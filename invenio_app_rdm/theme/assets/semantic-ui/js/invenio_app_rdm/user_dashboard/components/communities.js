@@ -27,7 +27,7 @@ import {
   RDMRecordFacetsValues,
   SearchHelpLinks,
 } from "../../search/components";
-import { Image } from "../../components"; // common components
+import { Image } from "../../components/Image"; // common components
 import { DashboardResultView, DashboardSearchLayoutHOC } from "./base";
 
 function ResultsGridItemTemplate({ result, index }) {
