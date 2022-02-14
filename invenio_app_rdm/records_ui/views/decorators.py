@@ -12,9 +12,9 @@
 from functools import wraps
 
 from flask import g, request
-from invenio_pidstore.errors import PIDUnregistered
+from invenio_communities.proxies import current_communities
+from invenio_pidstore.errors import PIDDoesNotExistError
 from invenio_rdm_records.proxies import current_rdm_records
-from invenio_rdm_records.resources.config import RDMDraftFilesResourceConfig
 from invenio_records_resources.services.errors import PermissionDeniedError
 from sqlalchemy.orm.exc import NoResultFound
 
@@ -234,5 +234,26 @@ def pass_draft_files(f):
             # files
             kwargs['draft_files'] = None
 
+        return f(**kwargs)
+    return view
+
+
+def pass_draft_community(f):
+    """Decorate to retrieve the community record using the community service.
+
+    Pass the community record or None when creating a new draft and having
+    selected a community via the url.
+    """
+    @wraps(f)
+    def view(**kwargs):
+        comid = kwargs.get('community')
+        try:
+            community = current_communities.service.read(
+                id_=comid, identity=g.identity
+            )
+            community = community.to_dict()
+        except PIDDoesNotExistError as e:
+            community = None
+        kwargs['community'] = community
         return f(**kwargs)
     return view
